@@ -1,6 +1,33 @@
 #!/bin/bash
 
+enable_auto_updates=true #Set to 'false' to disable auto updates
+
 USAGE='Usage: '"$0"' TYPE "NAME" Authorization_TOKEN Client-Id_TOKEN'"\n\n"'TYPE is either "channel" or "category".'"\n"'NAME is the name of the channel or the category.'"\n\n"'The "Authorization" and "Client-Id" tokens can be obtained when you open the Developer tools in your browser, then look at the Network requests, and search for the ones named "gql" to look at their Request Headers. (you obviously need to be logged in)'"\n\n"'Example:'"\n""$0"' category "Pools, Hot Tubs, and Beaches" a1b2c3d4e5f6g7h8i9j10k11l12m13 m13l12k11j10i9h8g7f6e5d4c3b2a1'
+
+auto_update () {
+    if wget -V > /dev/null 2>&1; then
+        if ! file_network=$(wget -qO- "$1"); then
+            return 1
+        fi
+    elif curl -V > /dev/null 2>&1; then
+        if ! file_network=$(curl -fsSL "$1"); then
+            return 1
+        fi
+    else
+        # wget and curl not found, can't check for update
+        return 2
+    fi
+    hash_local=$(md5sum "$2" | awk '{ print $1 }')
+    hash_network=$(echo -E "$file_network" | md5sum | awk '{ print $1 }')
+    if [[ "$hash_local" != "$hash_network" ]]; then
+        tmpfile=$(mktemp "${2##*/}".XXXXXXXXXX --tmpdir)
+        echo -E "$file_network" > "$tmpfile"
+        chown --reference="$2" "$tmpfile"
+        chmod --reference="$2" "$tmpfile"
+        mv "$tmpfile" "$(realpath "$2")"
+        exec "${@:2}"
+    fi
+}
 
 parsing () {
     if [[ "$#" -ne 4 ]]; then
@@ -87,6 +114,9 @@ main () {
     regex_check "$data_post"
 }
 
+if [ "$enable_auto_updates" = true ] ; then
+    auto_update "https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_remover/main/twitch_recommendation_remover.sh" "$0" "$@"
+fi
 parsing "$@"
 main "$@"
 echo "Recommendation removed. Check the following page:"
