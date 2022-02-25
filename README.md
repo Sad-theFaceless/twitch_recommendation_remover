@@ -10,6 +10,9 @@ wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_rem
 - Open the [link to the raw .ps1 script](https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_remover/main/twitch_recommendation_remover.ps1), right click and **Save as...**
 - Right click on the downloaded file, then click on **Run with PowerShell**
 
+The first time you launch the PowerShell script, it will download all the prerequisite files in a temporary directory.  
+It will then open a new prompt window to run the actual Bash script. ([see How to use](#how-to-use))
+
 ## How to use
 ```bash
 ./twitch_recommendation_remover.sh TYPE "NAME" Authorization_TOKEN Client-Id_TOKEN
@@ -25,7 +28,7 @@ wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_rem
 
 ## Retrieve the "Authorization" and "Client-Id" tokens on Twitch
 - Open the Developer tools in your browser
-- Click on the Network tab
+- Click on the **Network** tab
 - Reload the Twitch page
 - Click on a request named **gql** to look at their Request Headers. (**you need to be logged in**)
 #### Chrome
