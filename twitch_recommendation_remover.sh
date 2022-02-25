@@ -56,7 +56,7 @@ regex_check () {
         echo 'Error: HTTP response code: '"${BASH_REMATCH[1]}"'.' >&2
         exit 4
     fi
-    if [ ! -z "$2" ]; then
+    if [ -n "$2" ]; then
         if ! [[ $1 =~ $2 ]]; then
             echo 'Error: no match found for the query "'"$query"'".' >&2
             exit 5
