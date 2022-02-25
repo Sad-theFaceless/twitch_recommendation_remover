@@ -27,12 +27,12 @@ wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_rem
 
 ## Retrieve the "Authorization" and "Client-Id" tokens on Twitch
 - Open the Developer tools in your browser
+- Click on the Network tab
 - Reload the Twitch page
-- Look at the Network requests
-- Search for the requests named **gql** to look at their Request Headers. (**you need to be logged in**)
+- Click on a request named **gql** to look at their Request Headers. (**you need to be logged in**)
 #### Chrome
 ![image](https://user-images.githubusercontent.com/21340420/155695072-1985b99e-30ca-48da-a7ba-aa7c8cbbe749.png)  
-![image](https://user-images.githubusercontent.com/21340420/155696310-d8f1c535-57eb-4b5b-915a-7e5cf70c2087.png)
+![image](https://user-images.githubusercontent.com/21340420/155755848-c43f08f0-398c-49e3-bf32-231f276e5e5c.png)
 #### Firefox
 ![image](https://user-images.githubusercontent.com/21340420/155697210-0285483d-ac23-412e-9424-fb1eb9e9dbd6.png)  
-![image](https://user-images.githubusercontent.com/21340420/155697937-7b4b8e88-5393-43fa-bf78-8b54b921405a.png)
+![image](https://user-images.githubusercontent.com/21340420/155755887-4a37ead7-3c48-4215-a5fd-25802eec4c6d.png)
