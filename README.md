@@ -6,6 +6,11 @@ Bash script to remove recommended channels or categories on Twitch, without bein
 ```bash
 wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_remover/main/twitch_recommendation_remover.sh && chmod +x twitch_recommendation_remover.sh
 ```
+### Windows
+- Open the [link to the raw script](https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_remover/main/twitch_recommendation_remover.sh), right click and **Save as...**
+- Install [Git for Windows](https://github.com/git-for-windows/git/releases/latest) (the one ending with **-64-bit.exe**)
+  - Make sure the box "Git Bash Here" is checked
+- Right click on your File Explorer where you saved the script, then click on **Git Bash Here**
 
 ## How to use
 ```bash
