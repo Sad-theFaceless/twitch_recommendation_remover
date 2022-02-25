@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_rem
 ```
 - **TYPE** is either "**channel**" or "**category**".
 - **NAME** is the name of the channel or the category.
-- **Authorization_TOKEN** and **Client-Id_TOKEN** are the tokens retrieved from your Twitch ([see last section](../..#retrieve-the-authorization-and-client-id-tokens-on-twitch)).
+- **Authorization_TOKEN** and **Client-Id_TOKEN** are the tokens retrieved from your Twitch ([see last section](#retrieve-the-authorization-and-client-id-tokens-on-twitch)).
 
 ## Example
 ```bash
