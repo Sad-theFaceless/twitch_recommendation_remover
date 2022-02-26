@@ -17,8 +17,8 @@ It will then open a new prompt window that allows you to run the actual Bash scr
 ```bash
 ./twitch_recommendation_remover.sh TYPE "NAME" Authorization_TOKEN Client-Id_TOKEN
 ```
-- **TYPE** is either "**channel**" or "**category**".
-- **NAME** is the name of the channel or the category.
+- **TYPE** is either **channel** or **category**.
+- **NAME** is the name of the channel or the category (put it between double quotes).
 - **Authorization_TOKEN** and **Client-Id_TOKEN** are the tokens retrieved from your Twitch ([see last section](#retrieve-the-authorization-and-client-id-tokens-on-twitch)).
 
 ## Example
