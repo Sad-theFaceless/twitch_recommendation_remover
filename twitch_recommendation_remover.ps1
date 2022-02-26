@@ -46,6 +46,6 @@ if (!(Test-Path "$PSScriptRoot/$tmp_dir_name/$script_name"))
 }
 
 Set-Location "$PSScriptRoot/$tmp_dir_name/"
-& "$PSScriptRoot/$tmp_dir_name/PortableGit/git-bash.exe"
+Start-Process cmd -Argument "/c $PSScriptRoot\$tmp_dir_name\PortableGit\bin\bash.exe -li"
 
 #Read-Host -Prompt "Press Enter to exit"
