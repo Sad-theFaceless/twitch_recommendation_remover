@@ -7,7 +7,7 @@ Bash script to [remove recommended channels or categories on Twitch](https://www
 wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_remover/main/twitch_recommendation_remover.sh && chmod +x twitch_recommendation_remover.sh
 ```
 ### Windows
-- Right click on the .ps1 script file, and **Save link as...** (verify the extension is .ps1)
+- Right click on [this link](https://github.com/Sad-theFaceless/twitch_recommendation_remover/raw/main/twitch_recommendation_remover.ps1), and **Save link as...**
 - Once the file is downloaded, right click on it then **Run with PowerShell**
 
 The first time you launch the PowerShell script, it will download all the prerequisite files in a temporary directory.  
