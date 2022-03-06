@@ -71,7 +71,7 @@ get_category_id () {
     data_get=$(bash -c "$cmd_get")
 
     #echo -e "GET Request:\n$cmd_get\n"
-    echo -e "GET Response:\n$data_get\n"
+    #echo -e "GET Response:\n$data_get\n"
 
     regex_check "$data_get" '("game":\{"id":")([0-9]+)(")'
 
@@ -83,7 +83,7 @@ get_channel_id () {
     data_get=$(bash -c "$cmd_get")
 
     #echo -e "GET Request:\n$cmd_get\n"
-    echo -e "GET Response:\n$data_get\n"
+    #echo -e "GET Response:\n$data_get\n"
 
     regex_check "$data_get" '("user":\{"id":")([0-9]+)(")'
 
@@ -109,7 +109,7 @@ main () {
     data_post=$(bash -c "$cmd_post")
 
     #echo -e "POST Request:\n$cmd_post\n"
-    echo -e "POST Response:\n$data_post\n"
+    #echo -e "POST Response:\n$data_post\n"
 
     regex_check "$data_post"
 }
