@@ -2,7 +2,7 @@
 
 enable_auto_updates=true #Set to 'false' to disable auto updates
 
-USAGE='Usage: '"$0"' TYPE "NAME" Authorization_TOKEN Client-Id_TOKEN'"\n\n"'TYPE is either "channel" or "category".'"\n"'NAME is the name of the channel or the category.'"\n\n"'The "Authorization" and "Client-Id" tokens can be obtained when you open the Developer tools in your browser, then look at the Network requests, and search for the ones named "gql" to look at their Request Headers. (you obviously need to be logged in)'"\n\n"'Example:'"\n""$0"' category "Pools, Hot Tubs, and Beaches" a1b2c3d4e5f6g7h8i9j10k11l12m13 m13l12k11j10i9h8g7f6e5d4c3b2a1'
+USAGE='Usage: '"$0"' TYPE "NAME" Authorization_TOKEN'"\n\n"'TYPE is either "channel" or "category".'"\n"'NAME is the name of the channel or the category.'"\n\n"'The "Authorization" token can be obtained when you open the Developer tools in your browser, then look at the Network requests, and search for the ones named "gql" to look at their Request Headers. (you need to be logged in)'"\n\n"'Example:'"\n""$0"' category "Pools, Hot Tubs, and Beaches" a1b2c3d4e5f6g7h8i9j10k11l12m13'
 
 auto_update () {
     if wget -V > /dev/null 2>&1; then
@@ -30,7 +30,7 @@ auto_update () {
 }
 
 parsing () {
-    if [[ "$#" -ne 4 ]]; then
+    if [[ "$#" -ne 3 ]]; then
         echo -e "$USAGE"
         exit 1
     fi
@@ -94,7 +94,7 @@ main () {
     type="${1^^}"
     query="$2"
     Authorization="$3"
-    Client_Id="$4"
+    Client_Id="kimne78kx3ncx6brgo4mv6wki5h1ko"
 
     Target_Id=""
 
