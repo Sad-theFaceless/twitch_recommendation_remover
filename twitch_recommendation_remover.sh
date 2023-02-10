@@ -105,7 +105,7 @@ main () {
             get_channel_id ;;
     esac
 
-    cmd_post='curl -s -X POST https://gql.twitch.tv/gql --data '"'"'[{"operationName":"AddRecommendationFeedback","variables":{"input":{"category":"NOT_INTERESTED","itemID":"'"$Target_Id"'","itemType":"'"$type"'","sourceItemPage":"twitch_home","sourceItemRequestID":"0000-000-0000","sourceItemTrackingID":""}},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"8aae43e5b7fe68adc70608e35a4c9ec859d2cfde8962347487114703845d7887"}}}]'"'"' -H "Client-Id: '"$Client_Id"'" -H "Authorization: OAuth '"$Authorization"'" --write-out "\nResponse code: %{http_code}"'
+    cmd_post='curl -s -X POST https://gql.twitch.tv/gql --data '"'"'[{"operationName":"AddRecommendationFeedback","variables":{"input":{"category":"NOT_INTERESTED","itemID":"'"$Target_Id"'","itemType":"'"$type"'","sourceItemPage":"twitch_home","sourceItemRequestID":"0000000000000000","sourceItemTrackingID":"00000000-0000-0000-0000-000000000000:0"}},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"8aae43e5b7fe68adc70608e35a4c9ec859d2cfde8962347487114703845d7887"}}}]'"'"' -H "Client-Id: '"$Client_Id"'" -H "Authorization: OAuth '"$Authorization"'" --write-out "\nResponse code: %{http_code}"'
     data_post=$(bash -c "$cmd_post")
 
     #echo -e "POST Request:\n$cmd_post\n"

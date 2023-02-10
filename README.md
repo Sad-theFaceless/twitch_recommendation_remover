@@ -1,6 +1,8 @@
 # twitch_recommendation_remover
 Bash script to [remove recommended channels or categories on Twitch](https://www.twitch.tv/settings/recommendations), without being dependent of Twitch's own suggestions in the homepage.
 
+**DOES NOT WORK ANYMORE** as Twitch now verifies request integrities.
+
 ## Download
 ### GNU/Linux
 ```bash
