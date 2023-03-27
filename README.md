@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_rem
 *The first time you launch the PowerShell script, it will download all the prerequisite files in a temporary directory.  
 It will then open a new prompt window that allows you to run the actual Bash script. ([see How to use](#how-to-use))*
 
-## How to use
+## Usage
 ```bash
 ./twitch_recommendation_remover.sh TYPE "NAME" Authorization_TOKEN
 ```
