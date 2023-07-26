@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/Sad-theFaceless/twitch_recommendation_rem
 - Once the file is downloaded, right click on it then **Run with PowerShell**
 
 *The first time you launch the PowerShell script, it will download all the prerequisite files in a temporary directory.  
-It will then open a new prompt window that allows you to run the actual Bash script. ([see How to use](#how-to-use))*
+It will then open a new prompt window that allows you to run the actual Bash script. ([see Usage](#Usage))*
 
 ## Usage
 ```bash
